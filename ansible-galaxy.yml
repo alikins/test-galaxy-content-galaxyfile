@@ -1,0 +1,10 @@
+meta_version: ‘0.1’  #metadata format version
+modules:
+ - path: playbooks/modules/*
+ - path: modules/my_sample_module.py
+   dependencies:
+     - src: /module_utils
+ - path: modules/module_c.py
+   dependencies:
+     - src: git+https://github.com/maxamillion/test-galaxy-content
+       type: module_utils
