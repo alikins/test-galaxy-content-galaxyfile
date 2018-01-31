@@ -1,7 +1,7 @@
 meta_version: ‘0.1’  #metadata format version
 modules:
  - path: playbooks/modules/*
- - path: modules/galaxy_sample_module.py
+ - path: modules/galaxyfile_sample_module.py
    dependencies:
      - src: module_utils/*
  - path: modules/module_c.py
