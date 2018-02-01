@@ -62,6 +62,7 @@ message:
 '''
 
 from ansible.module_utils.basic import AnsibleModule
+from ansible.module_utils import galaxyfile_fake_module_util
 
 def run_module():
     # define the available arguments/parameters that a user can pass to
@@ -113,6 +114,7 @@ def run_module():
     if module.params['name'] == 'fail me':
         module.fail_json(msg='You requested this to fail', **result)
 
+    result['bloop'] = galaxyfile_fake_module_util.bloop()
     # in the event of a successful module execution, you will want to
     # simple AnsibleModule.exit_json(), passing the key/value results
     module.exit_json(**result)
